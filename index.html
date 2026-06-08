@@ -3,413 +3,483 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="منصة إعلامية وطنية متخصصة في إنتاج محتوى عالمي متعدد اللغات يحكي قصة المملكة العربية السعودية للعالم.">
-  <meta name="theme-color" content="#1a2744">
-  
-  <title>نور المملكة - منصة إعلامية وطنية</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <title>نور المملكة | نروي قصتنا للعالم</title>
+  <meta name="description" content="مشروع إعلامي وطني يحوّل مدن المملكة وثقافتها وإنجازاتها إلى قصص عالمية متعددة اللغات">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="header">
-    <div class="header-container">
-      <div class="logo-section">
-        <div class="logo">
-          <span class="logo-mark">◆</span>
-          <span class="logo-text">نور المملكة</span>
-        </div>
-      </div>
 
-      <nav class="nav-main">
-        <button class="nav-item" onclick="scrollToElement('about')">عن المشروع</button>
-        <button class="nav-item" onclick="scrollToElement('approach')">المنهجية</button>
-        <button class="nav-item" onclick="scrollToElement('offerings')">الخدمات</button>
-        <button class="nav-item" onclick="scrollToElement('cities')">الوجهات</button>
-        <button class="nav-item" onclick="scrollToElement('partnerships')">الشراكات</button>
-        <button class="nav-item" onclick="scrollToElement('contact')">التواصل</button>
-      </nav>
-
-      <button class="nav-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+<!-- HEADER -->
+<header class="header">
+  <div class="header-container">
+    <div class="logo-section">
+      <button class="logo" onclick="scrollToSection('hero')">
+        <span class="logo-mark">✨</span>
+        <span>نور المملكة</span>
       </button>
     </div>
-  </header>
 
-  <!-- Mobile Navigation -->
+    <nav class="nav-main">
+      <button class="nav-item" onclick="scrollToSection('about')">عن المشروع</button>
+      <button class="nav-item" onclick="scrollToSection('approach')">الآلية</button>
+      <button class="nav-item" onclick="scrollToSection('offerings')">الخدمات</button>
+      <button class="nav-item" onclick="scrollToSection('cities')">المدن</button>
+      <button class="nav-item" onclick="scrollToSection('partnerships')">الشراكات</button>
+      <button class="nav-item" onclick="scrollToSection('contact')">تواصل</button>
+    </nav>
+
+    <button class="nav-toggle" id="menuToggle" aria-label="القائمة">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
   <nav class="nav-mobile" id="navMobile">
-    <button class="nav-mobile-item" onclick="scrollToElement('about')">عن المشروع</button>
-    <button class="nav-mobile-item" onclick="scrollToElement('approach')">المنهجية</button>
-    <button class="nav-mobile-item" onclick="scrollToElement('offerings')">الخدمات</button>
-    <button class="nav-mobile-item" onclick="scrollToElement('cities')">الوجهات</button>
-    <button class="nav-mobile-item" onclick="scrollToElement('partnerships')">الشراكات</button>
-    <button class="nav-mobile-item" onclick="scrollToElement('contact')">التواصل</button>
+    <button class="nav-mobile-item" onclick="scrollToSection('about')">عن المشروع</button>
+    <button class="nav-mobile-item" onclick="scrollToSection('approach')">الآلية</button>
+    <button class="nav-mobile-item" onclick="scrollToSection('offerings')">الخدمات</button>
+    <button class="nav-mobile-item" onclick="scrollToSection('cities')">المدن</button>
+    <button class="nav-mobile-item" onclick="scrollToSection('partnerships')">الشراكات</button>
+    <button class="nav-mobile-item" onclick="scrollToSection('contact')">تواصل</button>
   </nav>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="hero-title">نور المملكة</h1>
-        <p class="hero-subtitle">منصة إعلامية وطنية متخصصة في سرد القصة السعودية للعالم</p>
-        <p class="hero-description">
-          نحول إنجازات المملكة وثقافتها وتطلعاتها إلى محتوى عالمي عالي الجودة يصل إلى ملايين المشاهدين بلغات متعددة
-        </p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" onclick="scrollToElement('contact')">طلب عرض توضيحي</button>
-          <button class="btn btn-secondary" onclick="scrollToElement('about')">المزيد عنا</button>
-        </div>
-      </div>
-      <div class="hero-media">
-        <img src="assets/hero-riyadh.jpg" alt="الرياض" class="hero-image">
-        <div class="hero-overlay"></div>
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="hero-content">
+    <div class="hero-media">
+      <img src="assets/hero.jpg" alt="نور المملكة" class="hero-image">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-text">
+      <h1 class="hero-title">نور المملكة</h1>
+      <h2 class="hero-subtitle">نروي قصتنا للعالم</h2>
+      <p class="hero-description">
+        مشروع إعلامي وطني يحوّل مدن المملكة وثقافتها وتجاربها وإنجازاتها إلى قصص عالمية متعددة اللغات تصل إلى ملايين الأشخاص حول العالم.
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="scrollToSection('contact')">طلب عرض المشروع</button>
+        <button class="btn btn-secondary" onclick="scrollToSection('partnerships')">شراكة استراتيجية</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- About Section -->
-  <section id="about" class="section section-about">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">عن المشروع</h2>
-        <p class="section-intro">مبادرة استراتيجية تدعم رؤية السعودية 2030 في تعزيز الحضور الإعلامي العالمي</p>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">عن نور المملكة</h2>
+      <p class="section-intro">مبادرة استراتيجية تنبثق من رؤية السعودية 2030 لتعزيز الصورة الذهنية للمملكة عبر المحتوى الرقمي العالمي</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-item">
+        <h3>من نحن</h3>
+        <p>فريق إعلامي وطني متخصص في صناعة محتوى رقمي راقٍ يبرز هوية المملكة وتجاربها للعالم.</p>
       </div>
-
-      <div class="about-grid">
-        <div class="about-item">
-          <h3>الرؤية</h3>
-          <p>أن نصبح المنصة الإعلامية الأولى في المنطقة التي تحكي قصة المملكة بمستوى عالمي احترافي</p>
-        </div>
-        <div class="about-item">
-          <h3>الرسالة</h3>
-          <p>إنتاج محتوى عالمي عالي الجودة يعكس حقيقة الإنجازات والفرص التي تمثل المملكة</p>
-        </div>
-        <div class="about-item">
-          <h3>الهدف الاستراتيجي</h3>
-          <p>تعزيز الصورة الذهنية للمملكة وزيادة جاذبيتها للاستثمارات والشراكات والسياحة العالمية</p>
-        </div>
+      <div class="about-item">
+        <h3>الرؤية</h3>
+        <p>أن نكون المنصة الإعلامية الأولى التي تروي قصة السعودية للعالم بلغات متعددة وجودة عالمية.</p>
+      </div>
+      <div class="about-item">
+        <h3>الرسالة</h3>
+        <p>تحويل المدن والثقافة والإنجازات الوطنية إلى محتوى ملهم يصل إلى ملايين الجماهير حول العالم.</p>
+      </div>
+      <div class="about-item">
+        <h3>الأهداف</h3>
+        <p>تعزيز الصورة الذهنية للمملكة وتسليط الضوء على إنجازاتها وقيمها الحضارية والثقافية.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Approach Section -->
-  <section id="approach" class="section section-approach">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">المنهجية</h2>
-        <p class="section-intro">عملية مدروسة وموثقة لإنتاج محتوى عالمي متميز</p>
+<!-- APPROACH -->
+<section id="approach" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">آلية العمل</h2>
+      <p class="section-intro">نهج منسق ومحترف لتحويل القصص الوطنية إلى محتوى عالمي</p>
+    </div>
+    <div class="approach-steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <div class="step-content">
+          <h4>تحديد المحتوى</h4>
+          <p>اختيار المواضيع والقصص الوطنية ذات الأهمية والجاذبية العالمية.</p>
+        </div>
       </div>
-
-      <div class="approach-steps">
-        <div class="step">
-          <div class="step-number">01</div>
-          <div class="step-content">
-            <h4>الاختيار والتخطيط</h4>
-            <p>تحديد الوجهات والقصص ذات الأهمية الاستراتيجية والقيمة الإعلامية العالية</p>
-          </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <div class="step-content">
+          <h4>البحث والإعداد</h4>
+          <p>جمع المعلومات والبيانات وإعداد السيناريوهات احترافية.</p>
         </div>
-
-        <div class="step">
-          <div class="step-number">02</div>
-          <div class="step-content">
-            <h4>التطوير الإبداعي</h4>
-            <p>تطوير المفاهيم الإبداعية والسيناريوهات بالتعاون مع خبراء دوليين</p>
-          </div>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <div class="step-content">
+          <h4>الإنتاج</h4>
+          <p>إنتاج محتوى بجودة عالمية (فيديو، صور، نصوص).</p>
         </div>
-
-        <div class="step">
-          <div class="step-number">03</div>
-          <div class="step-content">
-            <h4>الإنتاج والتصوير</h4>
-            <p>تصوير احترافي وإنتاج عالي المستوى باستخدام أحدث التقنيات والمعدات</p>
-          </div>
+      </div>
+      <div class="step">
+        <span class="step-number">4</span>
+        <div class="step-content">
+          <h4>الترجمة والتوطين</h4>
+          <p>ترجمة احترافية وتوطين المحتوى لعدة لغات.</p>
         </div>
-
-        <div class="step">
-          <div class="step-number">04</div>
-          <div class="step-content">
-            <h4>المعالجة والترجمة</h4>
-            <p>مونتاج احترافي وترجمة ثقافية دقيقة إلى لغات متعددة</p>
-          </div>
+      </div>
+      <div class="step">
+        <span class="step-number">5</span>
+        <div class="step-content">
+          <h4>النشر والتوزيع</h4>
+          <p>نشر المحتوى على منصات عالمية متعددة.</p>
         </div>
-
-        <div class="step">
-          <div class="step-number">05</div>
-          <div class="step-content">
-            <h4>التوزيع الاستراتيجي</h4>
-            <p>نشر محسّن على المنصات العالمية بتوقيت استراتيجي وحملات ترويج مستهدفة</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="step-number">06</div>
-          <div class="step-content">
-            <h4>القياس والتحليل</h4>
-            <p>قياس شامل للأداء والتأثير مع تقارير تفصيلية وملموسة</p>
-          </div>
+      </div>
+      <div class="step">
+        <span class="step-number">6</span>
+        <div class="step-content">
+          <h4>التحليل والتقييم</h4>
+          <p>قياس الأثر وتحليل الأداء والنتائج.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Offerings Section -->
-  <section id="offerings" class="section section-offerings">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">ماذا نقدم</h2>
-        <p class="section-intro">خدمات متكاملة في مجال الإنتاج والإعلام والتسويق</p>
+<!-- OFFERINGS -->
+<section id="offerings" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">ماذا نقدم</h2>
+      <p class="section-intro">خدمات متكاملة لسرد قصة المملكة للعالم</p>
+    </div>
+    <div class="offerings-grid">
+      <div class="offering-card">
+        <div class="offering-header">محتوى فيديو</div>
+        <p>إنتاج مقاطع فيديو احترافية بجودة 4K تحكي قصص ملهمة عن المملكة.</p>
+        <ul class="offering-features">
+          <li>فيديوهات وثائقية</li>
+          <li>فيديوهات قصيرة</li>
+          <li>حلقات مسلسلة</li>
+        </ul>
       </div>
 
-      <div class="offerings-grid">
-        <div class="offering-card">
-          <div class="offering-header">أفلام وثائقية</div>
-          <p>إنتاج أفلام وثائقية احترافية عن الوجهات والمشاريع الكبرى والقصص الملهمة</p>
-          <ul class="offering-features">
-            <li>تصوير سينمائي بجودة 4K</li>
-            <li>إخراج عالمي المستوى</li>
-            <li>موسيقى وصوتيات احترافية</li>
-          </ul>
-        </div>
+      <div class="offering-card">
+        <div class="offering-header">محتوى صور</div>
+        <p>مجموعات صور عالية الجودة تعكس جمال وتنوع المملكة.</p>
+        <ul class="offering-features">
+          <li>صور احترافية</li>
+          <li>ألبومات موضوعية</li>
+          <li>معارض رقمية</li>
+        </ul>
+      </div>
 
-        <div class="offering-card">
-          <div class="offering-header">محتوى رقمي</div>
-          <p>محتوى متخصص للمنصات الرقمية والشبكات الاجتماعية بأشكال وصيغ متعددة</p>
-          <ul class="offering-features">
-            <li>فيديوهات قصيرة وطويلة</li>
-            <li>محتوى للشبكات الاجتماعية</li>
-            <li>صور وجرافيكس احترافية</li>
-          </ul>
-        </div>
+      <div class="offering-card">
+        <div class="offering-header">محتوى نصي</div>
+        <p>مقالات عميقة وملخصات إخبارية تتناول قصص وإنجازات المملكة.</p>
+        <ul class="offering-features">
+          <li>مقالات متعمقة</li>
+          <li>أخبار وتقارير</li>
+          <li>ملخصات متخصصة</li>
+        </ul>
+      </div>
 
-        <div class="offering-card">
-          <div class="offering-header">ترجمة واستنساخ</div>
-          <p>ترجمة ثقافية دقيقة وإعادة إنتاج محتوى لأسواق مختلفة بكفاءة عالية</p>
-          <ul class="offering-features">
-            <li>ترجمة احترافية</li>
-            <li>توطين ثقافي دقيق</li>
-            <li>دعم لـ 6+ لغات</li>
-          </ul>
-        </div>
+      <div class="offering-card">
+        <div class="offering-header">الترجمة متعددة اللغات</div>
+        <p>ترجمة احترافية لعدة لغات عالمية مع المحافظة على الرسالة.</p>
+        <ul class="offering-features">
+          <li>ترجمة نصية</li>
+          <li>ترجمة صوتية</li>
+          <li>توطين محتوى</li>
+        </ul>
+      </div>
 
-        <div class="offering-card">
-          <div class="offering-header">التوزيع والنشر</div>
-          <p>استراتيجية توزيع شاملة على المنصات العالمية الكبرى مع ضمان أقصى وصول</p>
-          <ul class="offering-features">
-            <li>نشر على المنصات الرئيسية</li>
-            <li>حملات ترويج مستهدفة</li>
-            <li>إدارة الحضور الرقمي</li>
-          </ul>
+      <div class="offering-card">
+        <div class="offering-header">إدارة التوزيع</div>
+        <p>نشر المحتوى على منصات عالمية وإدارة توزيعه المنسق.</p>
+        <ul class="offering-features">
+          <li>منصات رقمية</li>
+          <li>وسائل إعلام</li>
+          <li>شراكات استراتيجية</li>
+        </ul>
+      </div>
+
+      <div class="offering-card">
+        <div class="offering-header">التحليل والتقارير</div>
+        <p>قياس الأثر وتقديم تقارير شاملة عن أداء المحتوى.</p>
+        <ul class="offering-features">
+          <li>تحليل الوصول</li>
+          <li>قياس التأثير</li>
+          <li>تقارير دورية</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CITIES -->
+<section id="cities" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">المدن التي نروي قصصها</h2>
+      <p class="section-intro">قصص متنوعة من أهم مدن المملكة</p>
+    </div>
+    <div class="cities-list">
+      <div class="city-item">
+        <div class="city-image">
+          <img src="assets/riyadh.jpg" alt="الرياض">
+        </div>
+        <div class="city-info">
+          <h3>الرياض</h3>
+          <p>عاصمة المملكة وقلب التطور والابتكار.</p>
+        </div>
+      </div>
+
+      <div class="city-item">
+        <div class="city-image">
+          <img src="assets/jeddah.jpg" alt="جدة">
+        </div>
+        <div class="city-info">
+          <h3>جدة</h3>
+          <p>عروس البحر الأحمر والنافذة على العالم.</p>
+        </div>
+      </div>
+
+      <div class="city-item">
+        <div class="city-image">
+          <img src="assets/neom.jpg" alt="نيوم">
+        </div>
+        <div class="city-info">
+          <h3>نيوم</h3>
+          <p>مدينة المستقبل والابتكار التكنولوجي.</p>
+        </div>
+      </div>
+
+      <div class="city-item">
+        <div class="city-image">
+          <img src="assets/alula.jpg" alt="العُلا">
+        </div>
+        <div class="city-info">
+          <h3>العُلا</h3>
+          <p>موقع التراث العالمي والعجائب الأثرية.</p>
+        </div>
+      </div>
+
+      <div class="city-item">
+        <div class="city-image">
+          <img src="assets/abha.jpg" alt="أبها">
+        </div>
+        <div class="city-info">
+          <h3>أبها</h3>
+          <p>جنة الطبيعة والسياحة الجبلية.</p>
+        </div>
+      </div>
+
+      <div class="city-item">
+        <div class="city-image">
+          <img src="assets/dammam.jpg" alt="الدمام">
+        </div>
+        <div class="city-info">
+          <h3>الدمام</h3>
+          <p>العمود الفقري للاقتصاد والطاقة.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Cities Section -->
-  <section id="cities" class="section section-cities">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">الوجهات</h2>
-        <p class="section-intro">مدن وأماكن تستحق أن تُروى قصتها للعالم</p>
+<!-- PARTNERSHIPS -->
+<section id="partnerships" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">الشراكات والتعاون</h2>
+      <p class="section-intro">نتعاون مع أفضل المنصات والمؤسسات العالمية</p>
+    </div>
+    <div class="partnerships-grid">
+      <div class="partnership-card">
+        <h3>منصات إعلامية عالمية</h3>
+        <p>توزيع المحتوى على أكبر المنصات الإعلامية الدولية لضمان الوصول لملايين المشاهدين.</p>
       </div>
 
-      <div class="cities-list">
-        <div class="city-item">
-          <div class="city-image">
-            <img src="assets/hero-riyadh.jpg" alt="الرياض">
-          </div>
-          <div class="city-info">
-            <h3>الرياض</h3>
-            <p>العاصمة النابضة بالحياة، مركز الأعمال والمشاريع الكبرى التي تجسد طموحات المستقبل</p>
-          </div>
-        </div>
+      <div class="partnership-card">
+        <h3>شركات إنتاج عالمية</h3>
+        <p>التعاون مع استوديوهات إنتاج متخصصة لضمان جودة عالمية احترافية.</p>
+      </div>
 
-        <div class="city-item">
-          <div class="city-image">
-            <img src="assets/city-alula.jpg" alt="العلا">
-          </div>
-          <div class="city-info">
-            <h3>العلا</h3>
-            <p>موقع تاريخي عالمي يجمع بين التراث الإنساني والطبيعة الخلابة والسياحة الفاخرة</p>
-          </div>
-        </div>
+      <div class="partnership-card">
+        <h3>وكالات السياحة</h3>
+        <p>عرض المحتوى في منصات السياحة لتعزيز الجذب السياحي للمملكة.</p>
+      </div>
 
-        <div class="city-item">
-          <div class="city-image">
-            <img src="assets/city-neom.jpg" alt="نيوم">
-          </div>
-          <div class="city-info">
-            <h3>نيوم</h3>
-            <p>مدينة المستقبل التي تجسد الابتكار والاستدامة والحياة الذكية</p>
-          </div>
-        </div>
+      <div class="partnership-card">
+        <h3>المؤسسات الثقافية</h3>
+        <p>التعاون مع المتاحف والمراكز الثقافية لتوثيق التراث والثقافة.</p>
+      </div>
 
-        <div class="city-item">
-          <div class="city-image">
-            <img src="assets/city-redsea.jpg" alt="البحر الأحمر">
-          </div>
-          <div class="city-info">
-            <h3>البحر الأحمر</h3>
-            <p>جنة طبيعية بشعاب مرجانية نادرة ووجهة سياحية عالمية فاخرة</p>
-          </div>
-        </div>
+      <div class="partnership-card">
+        <h3>الجهات الحكومية</h3>
+        <p>العمل مع الجهات الحكومية المختلفة لتوثيق الإنجازات الوطنية.</p>
+      </div>
 
-        <div class="city-item">
-          <div class="city-image">
-            <img src="assets/city-abha.jpg" alt="أبها">
-          </div>
-          <div class="city-info">
-            <h3>أبها</h3>
-            <p>عروس الجبال بطبيعتها الخضراء وتراثها العسيري العريق</p>
-          </div>
-        </div>
-
-        <div class="city-item">
-          <div class="city-image">
-            <img src="assets/culture.jpg" alt="الثقافة">
-          </div>
-          <div class="city-info">
-            <h3>الثقافة والتراث</h3>
-            <p>أصالة وكرم وفنون تراثية تحكي قصة الإنسان السعودي</p>
-          </div>
-        </div>
+      <div class="partnership-card">
+        <h3>المتخصصون والخبراء</h3>
+        <p>التعاون مع متخصصين وخبراء لضمان دقة ومصداقية المحتوى.</p>
       </div>
     </div>
-  </section>
+    <div class="partnership-note">
+      🤝 نرحب بالشراكات الاستراتيجية الجديدة | تواصل معنا للمزيد من المعلومات
+    </div>
+  </div>
+</section>
 
-  <!-- Partnerships Section -->
-  <section id="partnerships" class="section section-partnerships">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">نماذج الشراكة</h2>
-        <p class="section-intro">فرص شراكة استراتيجية ومرنة تناسب مختلف الجهات والقطاعات</p>
-      </div>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">تواصل معنا</h2>
+      <p class="section-intro">نحن هنا للإجابة على استفسارك والتعاون معك</p>
+    </div>
 
-      <div class="partnerships-grid">
-        <div class="partnership-card">
-          <h3>الجهات الحكومية</h3>
-          <p>إبراز المبادرات الوطنية وتعزيز الصورة الذهنية للمملكة عالمياً</p>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-label">البريد الإلكتروني</div>
+          <a href="mailto:info@noor-almamlaqa.com">info@noor-almamlaqa.com</a>
         </div>
 
-        <div class="partnership-card">
-          <h3>المستثمرون</h3>
-          <p>فرص استثمارية مباشرة في قطاع المحتوى الرقمي والاقتصاد الإبداعي</p>
+        <div class="contact-item">
+          <div class="contact-label">الهاتف</div>
+          <p>+966 (0) 11 1234 5678</p>
         </div>
 
-        <div class="partnership-card">
-          <h3>الشركات الكبرى</h3>
-          <p>حضور إعلامي قوي ووصول مضمون لجماهير عالمية مستهدفة</p>
+        <div class="contact-item">
+          <div class="contact-label">العنوان</div>
+          <p>الرياض، المملكة العربية السعودية</p>
         </div>
 
-        <div class="partnership-card">
-          <h3>الهيئات السياحية</h3>
-          <p>ترويج احترافي للوجهات السعودية عبر محتوى عالمي متخصص</p>
-        </div>
-
-        <div class="partnership-card">
-          <h3>الشركاء الإعلاميون</h3>
-          <p>شراكات إنتاج ونشر على أكبر المنصات الإعلامية العالمية</p>
-        </div>
-
-        <div class="partnership-card">
-          <h3>صنّاع المحتوى</h3>
-          <p>منصة احترافية وفرص تعاون مع أفضل المواهب المحلية والدولية</p>
+        <div class="contact-item">
+          <div class="contact-label">ساعات العمل</div>
+          <p>من السبت إلى الخميس<br>8:00 صباحاً - 5:00 مساءً</p>
         </div>
       </div>
 
-      <div class="partnership-note">
-        <p>نماذج شراكة مخصصة حسب الاحتياجات والقدرات</p>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label>الاسم</label>
+          <input type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>البريد الإلكتروني</label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label>الموضوع</label>
+          <input type="text" name="subject" required>
+        </div>
+
+        <div class="form-group">
+          <label>الرسالة</label>
+          <textarea name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">نور المملكة</div>
+        <p>مشروع إعلامي وطني يحوّل قصة المملكة إلى محتوى عالمي ملهم.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>الملاحات</h4>
+        <ul>
+          <li><button onclick="scrollToSection('about')">عن المشروع</button></li>
+          <li><button onclick="scrollToSection('approach')">الآلية</button></li>
+          <li><button onclick="scrollToSection('offerings')">الخدمات</button></li>
+          <li><button onclick="scrollToSection('cities')">المدن</button></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>المشروع</h4>
+        <ul>
+          <li><button onclick="scrollToSection('partnerships')">الشراكات</button></li>
+          <li><button onclick="scrollToSection('contact')">تواصل</button></li>
+          <li><a href="#">السياسة</a></li>
+          <li><a href="#">الشروط والأحكام</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>تابعنا</h4>
+        <ul>
+          <li><a href="https://twitter.com" target="_blank">تويتر</a></li>
+          <li><a href="https://instagram.com" target="_blank">إنستجرام</a></li>
+          <li><a href="https://youtube.com" target="_blank">يوتيوب</a></li>
+          <li><a href="https://linkedin.com" target="_blank">لينكد إن</a></li>
+        </ul>
       </div>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section section-contact">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">التواصل والاستفسارات</h2>
-        <p class="section-intro">تواصل معنا لمعرفة المزيد عن فرص الشراكة</p>
-      </div>
-
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-label">البريد الإلكتروني</div>
-            <a href="mailto:info@noor-almamlakah.sa">info@noor-almamlakah.sa</a>
-          </div>
-          <div class="contact-item">
-            <div class="contact-label">الهاتف</div>
-            <a href="tel:+966500000000">+966 50 000 0000</a>
-          </div>
-          <div class="contact-item">
-            <div class="contact-label">الموقع</div>
-            <p>الرياض، المملكة العربية السعودية</p>
-          </div>
-        </div>
-
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label>الاسم الكامل</label>
-            <input type="text" name="name" required>
-          </div>
-          <div class="form-group">
-            <label>جهتك / شركتك</label>
-            <input type="text" name="org">
-          </div>
-          <div class="form-group">
-            <label>البريد الإلكتروني</label>
-            <input type="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label>الرسالة</label>
-            <textarea name="message" rows="5"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">إرسال</button>
-        </form>
-      </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 نور المملكة - جميع الحقوق محفوظة</p>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <div class="footer-logo">نور المملكة</div>
-          <p>منصة إعلامية وطنية متخصصة في إنتاج محتوى عالمي يحكي قصة المملكة</p>
-        </div>
+<!-- JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navMobile = document.getElementById('navMobile');
 
-        <div class="footer-section">
-          <h4>الروابط السريعة</h4>
-          <ul>
-            <li><button onclick="scrollToElement('about')">عن المشروع</button></li>
-            <li><button onclick="scrollToElement('approach')">المنهجية</button></li>
-            <li><button onclick="scrollToElement('offerings')">الخدمات</button></li>
-            <li><button onclick="scrollToElement('partnerships')">الشراكات</button></li>
-          </ul>
-        </div>
+  menuToggle.addEventListener('click', function() {
+    navMobile.classList.toggle('open');
+  });
 
-        <div class="footer-section">
-          <h4>التواصل</h4>
-          <ul>
-            <li><a href="mailto:info@noor-almamlakah.sa">البريد الإلكتروني</a></li>
-            <li><a href="tel:+966500000000">الهاتف</a></li>
-            <li><a href="#">شروط الاستخدام</a></li>
-          </ul>
-        </div>
-      </div>
+  // Close mobile menu when clicking a link
+  const mobileLinks = navMobile.querySelectorAll('.nav-mobile-item');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      navMobile.classList.remove('open');
+    });
+  });
+});
 
-      <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> نور المملكة. جميع الحقوق محفوظة.</p>
-      </div>
-    </div>
-  </footer>
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+    // Close mobile menu if open
+    const navMobile = document.getElementById('navMobile');
+    if (navMobile) {
+      navMobile.classList.remove('open');
+    }
+  }
+}
 
-  <script src="script.js"></script>
+// Contact Form Submission
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('شكراً لك! تم استلام رسالتك. سيتواصل معك فريقنا قريباً.');
+    contactForm.reset();
+  });
+}
+</script>
+
 </body>
 </html>
