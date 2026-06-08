@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نور المملكة | نروي قصتنا للعالم</title>
+  <meta name="description" content="مشروع إعلامي وطني يحوّل مدن المملكة وثقافتها وإنجازاتها إلى قصص عالمية متعددة اللغات دعماً لرؤية السعودية 2030.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Navbar -->
+  <header class="header">
+    <div class="navbar glass-strong container">
+      <button class="nav-logo" onclick="scrollToId('hero')">
+        <span class="nav-logo-icon">
+          <!-- Crown Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/></svg>
+        </span>
+        <span>نور <span class="text-gold-gradient">المملكة</span></span>
+      </button>
+
+      <nav class="nav-links">
+        <button onclick="scrollToId('about')">عن المشروع</button>
+        <button onclick="scrollToId('why')">لماذا نور المملكة</button>
+        <button onclick="scrollToId('how')">كيف يعمل</button>
+        <button onclick="scrollToId('cities')">المدن</button>
+        <button onclick="scrollToId('stories')">ماذا نروي</button>
+        <button onclick="scrollToId('partners')">الشراكات</button>
+        <button onclick="scrollToId('contact')">تواصل</button>
+      </nav>
+
+      <button class="nav-cta" onclick="scrollToId('contact')">طلب عرض المشروع</button>
+
+      <button class="nav-toggle" id="menu-btn" aria-label="القائمة">
+        <!-- Menu Icon -->
+        <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <!-- X Icon -->
+        <svg id="menu-icon-close" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu glass-strong container" id="mobile-menu">
+      <button onclick="scrollToId('about')">عن المشروع</button>
+      <button onclick="scrollToId('why')">لماذا نور المملكة</button>
+      <button onclick="scrollToId('how')">كيف يعمل</button>
+      <button onclick="scrollToId('cities')">المدن</button>
+      <button onclick="scrollToId('stories')">ماذا نروي</button>
+      <button onclick="scrollToId('partners')">الشراكات</button>
+      <button onclick="scrollToId('contact')">تواصل</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <img src="assets/hero-riyadh.jpg" alt="أفق الرياض ليلاً" class="hero-bg" loading="lazy" />
+    <div class="hero-overlay"></div>
+    <div class="hero-glow animate-glow"></div>
+
+    <div class="container hero-content">
+      <span class="glass hero-badge reveal">
+        <!-- Sparkles Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+        مشروع إعلامي وطني • رؤية السعودية 2030
+      </span>
+
+      <h1 class="hero-title reveal" style="transition-delay: 0.1s;">
+        نور <span class="text-gold-gradient">المملكة</span>
+        <span class="hero-subtitle">نروي قصتنا للعالم</span>
+      </h1>
+
+      <p class="hero-desc reveal" style="transition-delay: 0.25s;">
+        مشروع إعلامي وطني يحوّل مدن المملكة وثقافتها وتجاربها وإنجازاتها إلى قصص
+        عالمية متعددة اللغات تصل إلى ملايين الأشخاص حول العالم.
+      </p>
+
+      <div class="hero-actions reveal" style="transition-delay: 0.4s;">
+        <button onclick="scrollToId('contact')" class="btn-primary">طلب عرض المشروع</button>
+        <button onclick="scrollToId('partners')" class="btn-outline">شراكة استراتيجية</button>
+        <button onclick="scrollToId('contact')" class="btn-text">تواصل معنا</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="kicker">عن نور المملكة</span>
+        <h2 class="section-title">مشروع وطني يضيء حضور المملكة عالمياً</h2>
+        <p class="section-sub">مبادرة استراتيجية تنبثق من رؤية السعودية 2030 لتعزيز الصورة الذهنية للمملكة عبر المحتوى الرقمي.</p>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass-strong reveal" style="transition-delay: 0s;">
+          <span class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <h3>من نحن</h3>
+          <p>فريق إعلامي وطني متخصص في صناعة محتوى رقمي راقٍ يبرز هوية المملكة وتجاربها للعالم.</p>
+        </div>
+        <div class="about-card glass-strong reveal" style="transition-delay: 0.08s;">
+          <span class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          </span>
+          <h3>الرؤية</h3>
+          <p>أن نكون المنصة الإعلامية الأولى التي تروي قصة السعودية للعالم بلغات متعددة وجودة عالمية.</p>
+        </div>
+        <div class="about-card glass-strong reveal" style="transition-delay: 0.16s;">
+          <span class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          </span>
+          <h3>الرسالة</h3>
+          <p>تحويل المدن والثقافة والإنجازات الوطنية إلى محتوى ملهم يصل إلى ملايين الجماهير حول العالم.</p>
+        </div>
+        <div class="about-card glass-strong reveal" style="transition-delay: 0.24s;">
+          <span class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/></svg>
+          </span>
+          <h3>لماذا أُطلق المشروع</h3>
+          <p>لسد فجوة المحتوى العالمي عن المملكة وتقديم صورتها الحقيقية بأسلوب احترافي فاخر.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section id="why" class="section bg-grid">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="kicker">القيمة</span>
+        <h2 class="section-title">لماذا نور المملكة؟</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal" style="transition-delay: 0s;">
+          <span class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </span>
+          <p>تعزيز الصورة الذهنية للمملكة عالمياً</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay: 0.06s;">
+          <span class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.7l-1.5 4c-.1.3.1.6.4.7L10 14l-4 4-2.5-.5c-.3-.1-.6 0-.8.2l-1.5 1.5c-.2.2-.2.6 0 .8l4.5 4.5c.2.2.6.2.8 0l1.5-1.5c.2-.2.3-.5.2-.8L7 20l4-4 2.4 7.4c.1.3.4.5.7.4l4-1.5c.5-.2.8-.6.7-1.1Z"/></svg>
+          </span>
+          <p>دعم السياحة والثقافة الوطنية</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay: 0.12s;">
+          <span class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+          </span>
+          <p>إبراز المشاريع الوطنية الكبرى</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay: 0.18s;">
+          <span class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+          </span>
+          <p>صناعة محتوى عالمي متعدد اللغات</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay: 0.24s;">
+          <span class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+          </span>
+          <p>بناء مكتبة محتوى وطنية مستدامة</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay: 0.3s;">
+          <span class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          </span>
+          <p>دعم الاقتصاد الإبداعي</p>
+        </div>
+        <div class="why-card reveal" style="transition-delay: 0.36s;">
+          <span class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </span>
+          <p>تعزيز الحضور الدولي للمملكة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How -->
+  <section id="how" class="section">
+    <div class="container-sm">
+      <div class="section-title-wrap reveal">
+        <span class="kicker">آلية العمل</span>
+        <h2 class="section-title">كيف يعمل المشروع</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="how-container">
+        <div class="how-line"></div>
+        <div class="how-steps">
+          <!-- Step 1 -->
+          <div class="how-step reveal" style="transition-delay: 0s;">
+            <span class="step-number">1</span>
+            <div class="step-content glass-strong">
+              <h3>اختيار المدن والوجهات</h3>
+              <p>تحديد أبرز الوجهات السعودية ذات القصة العالمية.</p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="how-step reveal" style="transition-delay: 0.05s;">
+            <span class="step-number">2</span>
+            <div class="step-content glass-strong">
+              <h3>صناعة المحتوى الاحترافي</h3>
+              <p>إنتاج بصري سينمائي بأعلى المعايير العالمية.</p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="how-step reveal" style="transition-delay: 0.1s;">
+            <span class="step-number">3</span>
+            <div class="step-content glass-strong">
+              <h3>إشراك صنّاع المحتوى</h3>
+              <p>شبكة من المبدعين المحليين والدوليين.</p>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div class="how-step reveal" style="transition-delay: 0.15s;">
+            <span class="step-number">4</span>
+            <div class="step-content glass-strong">
+              <h3>إنتاج متعدد اللغات</h3>
+              <p>ترجمة وتكييف المحتوى لجماهير متعددة.</p>
+            </div>
+          </div>
+          <!-- Step 5 -->
+          <div class="how-step reveal" style="transition-delay: 0.2s;">
+            <span class="step-number">5</span>
+            <div class="step-content glass-strong">
+              <h3>النشر العالمي</h3>
+              <p>توزيع عبر المنصات الأكثر وصولاً حول العالم.</p>
+            </div>
+          </div>
+          <!-- Step 6 -->
+          <div class="how-step reveal" style="transition-delay: 0.25s;">
+            <span class="step-number">6</span>
+            <div class="step-content glass-strong">
+              <h3>قياس الأثر والنتائج</h3>
+              <p>تحليل دقيق للوصول والتفاعل والأثر.</p>
+            </div>
+          </div>
+          <!-- Step 7 -->
+          <div class="how-step reveal" style="transition-delay: 0.3s;">
+            <span class="step-number">7</span>
+            <div class="step-content glass-strong">
+              <h3>التوسع المستمر</h3>
+              <p>توسيع التغطية والشراكات والمحتوى باستمرار.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities -->
+  <section id="cities" class="section bg-grid">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="kicker">المدن والمسارات</span>
+        <h2 class="section-title">وجهات تستحق أن تُروى للعالم</h2>
+        <p class="section-sub">اختر وجهة لاستكشاف مقوماتها وفرص صناعة المحتوى فيها.</p>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="cities-grid">
+        <div class="cities-tabs reveal">
+          <button class="city-tab active" data-index="0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            <span>الرياض</span>
+          </button>
+          <button class="city-tab" data-index="1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+            <span>العلا</span>
+          </button>
+          <button class="city-tab" data-index="2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><mpath d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+            <span>نيوم</span>
+          </button>
+          <button class="city-tab" data-index="3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
+            <span>البحر الأحمر</span>
+          </button>
+          <button class="city-tab" data-index="4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+            <span>أبها</span>
+          </button>
+          <button class="city-tab" data-index="5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+            <span>الثقافة السعودية</span>
+          </button>
+        </div>
+
+        <div class="city-content active" id="city-0">
+          <div class="city-img">
+            <img src="assets/hero-riyadh.jpg" alt="الرياض" />
+            <div class="city-img-overlay"></div>
+            <h3>الرياض</h3>
+          </div>
+          <div class="city-details">
+            <p>العاصمة النابضة بالحياة ومركز الأعمال والمشاريع الكبرى.</p>
+            <div class="city-tags">
+              <span class="city-tag">المشاريع الكبرى</span>
+              <span class="city-tag">الفعاليات العالمية</span>
+              <span class="city-tag">الحياة الحضرية</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeated city-content for other cities... JS will handle this or we can render them all and show/hide -->
+        <div class="city-content" id="city-1">
+          <div class="city-img">
+            <img src="assets/city-alula.jpg" alt="العلا" />
+            <div class="city-img-overlay"></div>
+            <h3>العلا</h3>
+          </div>
+          <div class="city-details">
+            <p>متحف مفتوح من الحضارات والآثار النبطية وسط جبال شاهقة.</p>
+            <div class="city-tags">
+              <span class="city-tag">مدائن صالح</span>
+              <span class="city-tag">التراث الإنساني</span>
+              <span class="city-tag">السياحة الفاخرة</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="city-content" id="city-2">
+          <div class="city-img">
+            <img src="assets/city-neom.jpg" alt="نيوم" />
+            <div class="city-img-overlay"></div>
+            <h3>نيوم</h3>
+          </div>
+          <div class="city-details">
+            <p>مدينة المستقبل ورمز الابتكار والاستدامة في المملكة.</p>
+            <div class="city-tags">
+              <span class="city-tag">مدن المستقبل</span>
+              <span class="city-tag">التقنية</span>
+              <span class="city-tag">الاستدامة</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="city-content" id="city-3">
+          <div class="city-img">
+            <img src="assets/city-redsea.jpg" alt="البحر الأحمر" />
+            <div class="city-img-overlay"></div>
+            <h3>البحر الأحمر</h3>
+          </div>
+          <div class="city-details">
+            <p>جزر بكر ومياه فيروزية ووجهة سياحية عالمية فاخرة.</p>
+            <div class="city-tags">
+              <span class="city-tag">الشعاب المرجانية</span>
+              <span class="city-tag">المنتجعات</span>
+              <span class="city-tag">السياحة البحرية</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="city-content" id="city-4">
+          <div class="city-img">
+            <img src="assets/city-abha.jpg" alt="أبها" />
+            <div class="city-img-overlay"></div>
+            <h3>أبها</h3>
+          </div>
+          <div class="city-details">
+            <p>عروس الجبال بطبيعتها الخضراء وأجوائها الباردة وتراثها العسيري.</p>
+            <div class="city-tags">
+              <span class="city-tag">المرتفعات</span>
+              <span class="city-tag">الطبيعة</span>
+              <span class="city-tag">التراث العسيري</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="city-content" id="city-5">
+          <div class="city-img">
+            <img src="assets/culture.jpg" alt="الثقافة السعودية" />
+            <div class="city-img-overlay"></div>
+            <h3>الثقافة السعودية</h3>
+          </div>
+          <div class="city-details">
+            <p>أصالة وكرم وفنون تراثية تروي قصة الإنسان السعودي.</p>
+            <div class="city-tags">
+              <span class="city-tag">الفنون</span>
+              <span class="city-tag">العادات</span>
+              <span class="city-tag">الضيافة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories -->
+  <section id="stories" class="section">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="kicker">المحتوى</span>
+        <h2 class="section-title">ماذا نروي للعالم؟</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="stories-grid">
+        <div class="story-card reveal" style="transition-delay: 0s;">
+          <div class="story-glow"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <h3>قصة الإنسان السعودي</h3>
+        </div>
+        <div class="story-card reveal" style="transition-delay: 0.05s;">
+          <div class="story-glow"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          <h3>قصة التحول الوطني</h3>
+        </div>
+        <div class="story-card reveal" style="transition-delay: 0.1s;">
+          <div class="story-glow"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <h3>قصة رؤية 2030</h3>
+        </div>
+        <div class="story-card reveal" style="transition-delay: 0.15s;">
+          <div class="story-glow"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+          <h3>قصة الثقافة والتراث</h3>
+        </div>
+        <div class="story-card reveal" style="transition-delay: 0.2s;">
+          <div class="story-glow"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+          <h3>قصة السياحة والطبيعة</h3>
+        </div>
+        <div class="story-card reveal" style="transition-delay: 0.25s;">
+          <div class="story-glow"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><mpath d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+          <h3>قصة الابتكار والتقنية</h3>
+        </div>
+        <div class="story-card reveal" style="transition-delay: 0.3s;">
+          <div class="story-glow"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          <h3>قصة الرياضة والترفيه</h3>
+        </div>
+        <div class="story-card reveal" style="transition-delay: 0.35s;">
+          <div class="story-glow"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+          <h3>قصة الفرص الاستثمارية</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="section bg-grid">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="kicker">الأثر المتوقع</span>
+        <h2 class="section-title">نتائج وطنية ملموسة</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="impact-grid" id="impact-list">
+        <!-- Impact items rendered via JS to keep HTML cleaner or just hardcoded. Hardcoded is fine. -->
+        <div class="impact-card glass-strong reveal" style="transition-delay: 0s;">
+          <span class="impact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <p>تعزيز الصورة الذهنية للمملكة</p>
+        </div>
+        <div class="impact-card glass-strong reveal" style="transition-delay: 0.05s;">
+          <span class="impact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <p>دعم السياحة الوطنية</p>
+        </div>
+        <div class="impact-card glass-strong reveal" style="transition-delay: 0.1s;">
+          <span class="impact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <p>زيادة الحضور الإعلامي العالمي</p>
+        </div>
+        <div class="impact-card glass-strong reveal" style="transition-delay: 0.15s;">
+          <span class="impact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <p>تعزيز التبادل الثقافي</p>
+        </div>
+        <div class="impact-card glass-strong reveal" style="transition-delay: 0.2s;">
+          <span class="impact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <p>بناء بنك محتوى وطني</p>
+        </div>
+        <div class="impact-card glass-strong reveal" style="transition-delay: 0.25s;">
+          <span class="impact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <p>خلق فرص شراكة واستثمار</p>
+        </div>
+        <div class="impact-card glass-strong reveal" style="transition-delay: 0.3s;">
+          <span class="impact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <p>الوصول لجماهير عالمية متعددة اللغات</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section id="partners" class="section">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="kicker">فرص الشراكة والرعاية</span>
+        <h2 class="section-title">شراكات استراتيجية بعائد وطني وعالمي</h2>
+        <p class="section-sub">نموذج شراكة مرن يناسب مختلف الجهات والقطاعات.</p>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="partners-grid">
+        <div class="partner-card reveal" style="transition-delay: 0s;">
+          <span class="partner-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+          </span>
+          <h3>الجهات الحكومية</h3>
+          <p>إبراز المبادرات الوطنية وتعزيز الصورة الذهنية للمملكة.</p>
+        </div>
+        <div class="partner-card reveal" style="transition-delay: 0.06s;">
+          <span class="partner-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </span>
+          <h3>المستثمرون</h3>
+          <p>فرص استثمارية في قطاع المحتوى والاقتصاد الإبداعي.</p>
+        </div>
+        <div class="partner-card reveal" style="transition-delay: 0.12s;">
+          <span class="partner-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+          </span>
+          <h3>الشركات</h3>
+          <p>حضور إعلامي وطني ووصول لجماهير عالمية مستهدفة.</p>
+        </div>
+        <div class="partner-card reveal" style="transition-delay: 0.18s;">
+          <span class="partner-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/></svg>
+          </span>
+          <h3>الرعاة</h3>
+          <p>ارتباط بمشروع وطني فاخر ذي أثر مستدام.</p>
+        </div>
+        <div class="partner-card reveal" style="transition-delay: 0.24s;">
+          <span class="partner-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.7l-1.5 4c-.1.3.1.6.4.7L10 14l-4 4-2.5-.5c-.3-.1-.6 0-.8.2l-1.5 1.5c-.2.2-.2.6 0 .8l4.5 4.5c.2.2.6.2.8 0l1.5-1.5c.2-.2.3-.5.2-.8L7 20l4-4 2.4 7.4c.1.3.4.5.7.4l4-1.5c.5-.2.8-.6.7-1.1Z"/></svg>
+          </span>
+          <h3>الهيئات السياحية</h3>
+          <p>ترويج للوجهات السعودية بمحتوى عالمي متعدد اللغات.</p>
+        </div>
+        <div class="partner-card reveal" style="transition-delay: 0.3s;">
+          <span class="partner-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </span>
+          <h3>الجهات الإعلامية</h3>
+          <p>شراكات إنتاج ونشر وتوزيع على نطاق دولي.</p>
+        </div>
+        <div class="partner-card reveal" style="transition-delay: 0.36s;">
+          <span class="partner-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+          </span>
+          <h3>صنّاع المحتوى</h3>
+          <p>منصة احترافية وفرص إنتاج وتعاون عالمية.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision -->
+  <section class="section vision-section">
+    <div class="vision-glow-1"></div>
+    <div class="vision-glow-2"></div>
+    <div class="container relative z-10">
+      <div class="section-title-wrap reveal">
+        <span class="kicker">الاتساق الاستراتيجي</span>
+        <h2 class="section-title">علاقتنا برؤية السعودية 2030</h2>
+        <p class="section-sub">يساهم المشروع بشكل مباشر في تحقيق مستهدفات الرؤية عبر محاور متعددة.</p>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="vision-grid">
+        <div class="vision-card glass reveal" style="transition-delay: 0s;"><span>السياحة</span></div>
+        <div class="vision-card glass reveal" style="transition-delay: 0.06s;"><span>الثقافة</span></div>
+        <div class="vision-card glass reveal" style="transition-delay: 0.12s;"><span>جودة الحياة</span></div>
+        <div class="vision-card glass reveal" style="transition-delay: 0.18s;"><span>الاقتصاد الإبداعي</span></div>
+        <div class="vision-card glass reveal" style="transition-delay: 0.24s;"><span>الحضور الدولي للمملكة</span></div>
+        <div class="vision-card glass reveal" style="transition-delay: 0.3s;"><span>تمكين المواهب</span></div>
+        <div class="vision-card glass reveal" style="transition-delay: 0.36s;"><span>المحتوى الوطني</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="reveal" style="transition-delay: 0s;">
+          <div class="stat-num text-gold-gradient counter-val" data-target="8" data-suffix="+">0+</div>
+          <p class="stat-text">مدينة مستهدفة</p>
+        </div>
+        <div class="reveal" style="transition-delay: 0.08s;">
+          <div class="stat-num text-gold-gradient counter-val" data-target="6" data-suffix="+">0+</div>
+          <p class="stat-text">لغة مستهدفة</p>
+        </div>
+        <div class="reveal" style="transition-delay: 0.16s;">
+          <div class="stat-num text-gold-gradient counter-val" data-target="500" data-suffix="+">0+</div>
+          <p class="stat-text">مادة إعلامية متوقعة</p>
+        </div>
+        <div class="reveal" style="transition-delay: 0.24s;">
+          <div class="stat-num text-gold-gradient counter-val" data-target="100" data-suffix="M+">0M+</div>
+          <p class="stat-text">جمهور عالمي مستهدف</p>
+        </div>
+        <div class="reveal" style="transition-delay: 0.32s;">
+          <div class="stat-num text-gold-gradient counter-val" data-target="50" data-suffix="+">0+</div>
+          <p class="stat-text">شراكة محتملة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="kicker">تواصل معنا</span>
+        <h2 class="section-title">لنبدأ شراكة تروي قصة المملكة للعالم</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info glass-strong reveal" style="transition-delay: 0s;">
+          <h3>معلومات التواصل</h3>
+          <a href="mailto:info@noor-almamlakah.sa" class="contact-link">
+            <span class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            info@noor-almamlakah.sa
+          </a>
+          <a href="tel:+966500000000" class="contact-link">
+            <span class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            ‎+966 50 000 0000
+          </a>
+          <div class="contact-link">
+            <span class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            الرياض، المملكة العربية السعودية
+          </div>
+          <div class="contact-actions">
+            <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" class="btn-primary" style="flex: 1; text-align: center;">واتساب</a>
+            <a href="mailto:info@noor-almamlakah.sa" class="btn-outline" style="flex: 1; text-align: center;">البريد الإلكتروني</a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" style="transition-delay: 0.1s;">
+          <div class="form-grid">
+            <input class="form-input" placeholder="الاسم" name="name" maxlength="100" />
+            <input class="form-input" placeholder="الجهة" name="org" maxlength="120" />
+            <input class="form-input" type="email" placeholder="البريد الإلكتروني" name="email" maxlength="160" />
+            <input class="form-input" placeholder="رقم الهاتف" name="phone" maxlength="30" />
+          </div>
+          <textarea class="form-input form-textarea" placeholder="الرسالة" name="message" maxlength="1000"></textarea>
+          <button type="submit" class="form-submit">
+            طلب عرض المشروع 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="nav-logo">
+          <span class="nav-logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/></svg>
+          </span>
+          <span>نور <span class="text-gold-gradient">المملكة</span></span>
+        </div>
+        <p class="footer-desc">
+          مشروع إعلامي وطني يروي قصة المملكة العربية السعودية للعالم بمحتوى رقمي
+          احترافي متعدد اللغات.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-title">روابط سريعة</h4>
+        <div class="footer-links">
+          <button onclick="scrollToId('about')">عن المشروع</button>
+          <button onclick="scrollToId('why')">لماذا نور المملكة</button>
+          <button onclick="scrollToId('how')">كيف يعمل</button>
+          <button onclick="scrollToId('cities')">المدن</button>
+          <button onclick="scrollToId('stories')">ماذا نروي</button>
+          <button onclick="scrollToId('partners')">الشراكات</button>
+          <button onclick="scrollToId('contact')">تواصل</button>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-title">تواصل</h4>
+        <div class="footer-links" style="align-items: flex-start;">
+          <span>info@noor-almamlakah.sa</span>
+          <span>+966 50 000 0000</span>
+          <span>الرياض، المملكة العربية السعودية</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span id="year"></span> © نور المملكة. جميع الحقوق محفوظة.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
